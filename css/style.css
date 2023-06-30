@@ -1,9 +1,8 @@
 
 * {
     box-sizing: border-box;
-    
-   
 }
+
 /*------ general styling------*/
 .grid-container {
     font-family: 'Roboto', sans-serif;
@@ -119,7 +118,7 @@ header {
     border-left: solid 1px #ffffff34;
 }
 /*------ navigation bar ------*/
-.nav-icon{
+.nav-icon {
     width: 2.2em;
     height: auto;
     fill: #fff;
@@ -171,7 +170,7 @@ main {
     border-radius: 4px;
     padding: 10px 15px;
 }
-/*------ Trafic chart ------*/
+/*------  Charts ------*/
 .traffic {
     display: flex;
     flex-direction: column;
@@ -190,16 +189,22 @@ main {
     padding: 7px 8px;
 }
 
-.traffic-nav-link:active {
+.traffic-nav-link:active,
+.traffic-nav-link:hover {
     color: #fff;
     background: #68f15b;
     border-radius: 20% / 50%;
    
 }
 
+
+#mobile-chart {
+  padding: 10px;
+}
+
 canvas {
     max-width: 95%;
-    margin: 0.6em;
+    margin: 10px;
 }
 
 /*------  Social Network  ------*/
@@ -431,7 +436,7 @@ textarea::placeholder {
 
     .grid-container {
         display: grid;
-        grid-template-columns: 55px 1fr;
+        grid-template-columns: 45px 1fr;
         grid-template-areas:
         "header header"
         "nav main";
@@ -439,11 +444,13 @@ textarea::placeholder {
 
      nav {
         display: block;
+        margin-right: 3px;
      }
 
      .nav-icon {
          position: sticky;
          top: 20px;
+         margin-left: 6px;
      }
 
      .charts-icon {
@@ -458,9 +465,16 @@ textarea::placeholder {
         top: 140px;
     }
 
+    .traffic-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .main {
         display: grid;
-        grid-template-columns: 50% ;
+        grid-template-columns: 50%;
      }
 
     .traffic, .social {
@@ -470,7 +484,11 @@ textarea::placeholder {
     .daily,
     .mobile {
         grid-column: span 1;
+        width: 47vw;
+        
     }
+
+    
 
     .mobile {
         border-left: solid 1px #00000033;
@@ -530,7 +548,7 @@ textarea::placeholder {
 @media (min-width: 1024px) {
     .grid-container {
         display: grid;
-        grid-template-columns: 55px 1fr;
+        grid-template-columns: 45px 1fr;
         grid-template-areas:
         "header header"
         "nav main";
@@ -543,6 +561,8 @@ textarea::placeholder {
      .nav-icon {
          position: sticky;
          top: 20px;
+         margin-left: 6px;
+
      }
 
      .charts-icon {
@@ -559,7 +579,7 @@ textarea::placeholder {
 
     .main {
         display: grid;
-        grid-template-columns: 50% ;
+        grid-template-columns: 50%;
      }
 
     .traffic, .social {
@@ -573,14 +593,15 @@ textarea::placeholder {
         align-items: center;
     }
 
-    .daily,
-    .mobile {
-        grid-column: span 1;
+    .daily {
+        grid-column: 1 / span 1;
+        width: 48vw;
     }
 
     .mobile {
-        border-left: solid 1px #00000033;
-        border-bottom: solid 1px #00000033;
+        grid-column: 2 / span 1;
+        width: 48vw;
+       
     }
 
      .main-header,
