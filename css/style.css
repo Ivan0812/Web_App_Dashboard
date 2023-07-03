@@ -454,15 +454,15 @@ textarea::placeholder {
      }
 
      .charts-icon {
-         top: 60px;
+         top: 77px;
      }
 
      .members-icon {
-        top: 100px;
+        top: 135px;
     }
 
     .settings-icon {
-        top: 140px;
+        top: 194px;
     }
 
     .traffic-header {
@@ -566,16 +566,16 @@ textarea::placeholder {
      }
 
      .charts-icon {
-         top: 60px;
-     }
-
-     .members-icon {
-        top: 100px;
+        top: 77px;
     }
 
-    .settings-icon {
-        top: 140px;
-    }
+    .members-icon {
+       top: 135px;
+   }
+
+   .settings-icon {
+       top: 194px;
+   }
 
     .main {
         display: grid;
